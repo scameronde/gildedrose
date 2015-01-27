@@ -6,7 +6,7 @@ class ConjuredItemUpdater extends ItemUpdater {
     super(item);
   }
 
-  static boolean fitsConjuredItems(Item item) {
+  static boolean fits(Item item) {
     return "Conjured Item".equals(item.name);
   }
 

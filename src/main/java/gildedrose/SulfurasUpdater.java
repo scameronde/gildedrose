@@ -6,7 +6,7 @@ class SulfurasUpdater extends ItemUpdater {
     super(item);
   }
 
-  static boolean fitsSulfuras(Item item) {
+  static boolean fits(Item item) {
     return "Sulfuras, Hand of Ragnaros".equals(item.name);
   }
 

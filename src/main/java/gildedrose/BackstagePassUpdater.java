@@ -6,7 +6,7 @@ class BackstagePassUpdater extends ItemUpdater {
     super(item);
   }
 
-  static boolean fitesBackstagePass(Item item) {
+  static boolean fits(Item item) {
     return "Backstage passes to a TAFKAL80ETC concert".equals(item.name);
   }
 

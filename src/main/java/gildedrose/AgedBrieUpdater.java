@@ -6,7 +6,7 @@ class AgedBrieUpdater extends ItemUpdater {
     super(item);
   }
 
-  static boolean fitsAgedBrie(Item item) {
+  static boolean fits(Item item) {
     return "Aged Brie".equals(item.name);
   }
 
