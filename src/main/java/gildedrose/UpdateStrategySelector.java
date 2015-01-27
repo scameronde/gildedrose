@@ -16,6 +16,9 @@ class UpdateStrategySelector {
     else if (item.name == "Sulfuras, Hand of Ragnaros") {
       itemUpdater = new SulfurasUpdater(item);
     }
+    else if (item.name == "Conjured Item") {
+      itemUpdater = new ConjuredItemUpdater(item);
+    }
     else {
       itemUpdater = new RegularItemUpdater(item);
     }
