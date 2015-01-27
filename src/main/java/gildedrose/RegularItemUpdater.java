@@ -1,8 +1,8 @@
 package gildedrose;
 
-class RegularItem extends AbstractItem {
+class RegularItemUpdater extends ItemUpdater {
 
-  public RegularItem(Item item) {
+  public RegularItemUpdater(Item item) {
     super(item);
   }
 

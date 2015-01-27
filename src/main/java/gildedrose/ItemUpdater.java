@@ -1,9 +1,9 @@
 package gildedrose;
 
-public abstract class AbstractItem {
+public abstract class ItemUpdater {
   protected Item item;
 
-  public AbstractItem(Item item) {
+  public ItemUpdater(Item item) {
     this.item = item;
   }
 

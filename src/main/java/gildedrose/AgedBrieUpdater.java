@@ -1,8 +1,8 @@
 package gildedrose;
 
-class AgedBrie extends AbstractItem {
+class AgedBrieUpdater extends ItemUpdater {
 
-  public AgedBrie(Item item) {
+  public AgedBrieUpdater(Item item) {
     super(item);
   }
 
