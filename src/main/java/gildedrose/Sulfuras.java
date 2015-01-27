@@ -1,13 +1,12 @@
 package gildedrose;
 
-class Sulfuras {
-  private Item item;
+class Sulfuras extends AbstractItem {
 
   public Sulfuras(Item item) {
-    this.item = item;
+    super(item);
   }
 
-  public void invoke() {
+  public void updateSellInAndQuality() {
     if (item.quality > 0) {
     }
   }

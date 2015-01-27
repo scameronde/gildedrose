@@ -8,21 +8,24 @@ class GildedRose {
   }
 
   public void updateQuality() {
+    AbstractItem itemHandler;
+
     for (int i = 0; i < items.length; i++) {
 
 			Item item = items[i];
 			if (item.name == "Aged Brie") {
-				new AgedBrie(item).invoke();
+        itemHandler = new AgedBrie(item);
       }
       else if (item.name == "Backstage passes to a TAFKAL80ETC concert") {
-				new BackstagePass(item).invoke();
+        itemHandler = new BackstagePass(item);
       }
       else if (item.name == "Sulfuras, Hand of Ragnaros") {
-				new Sulfuras(item).invoke();
-			}
-      else {
-				new RegularItem(item).invoke();
+        itemHandler = new Sulfuras(item);
       }
+      else {
+        itemHandler = new RegularItem(item);
+      }
+      itemHandler.updateSellInAndQuality();
     }
   }
 

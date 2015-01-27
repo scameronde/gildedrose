@@ -1,13 +1,12 @@
 package gildedrose;
 
-class RegularItem {
-  private Item item;
+class RegularItem extends AbstractItem {
 
   public RegularItem(Item item) {
-    this.item = item;
+    super(item);
   }
 
-  public void invoke() {
+  public void updateSellInAndQuality() {
     if (item.quality > 0) {
       item.quality = item.quality - 1;
     }

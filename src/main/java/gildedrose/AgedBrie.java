@@ -1,13 +1,12 @@
 package gildedrose;
 
-class AgedBrie {
-  private Item item;
+class AgedBrie extends AbstractItem {
 
   public AgedBrie(Item item) {
-    this.item = item;
+    super(item);
   }
 
-  public void invoke() {
+  public void updateSellInAndQuality() {
     if (item.quality < 50) {
       item.quality = item.quality + 1;
     }
