@@ -7,16 +7,16 @@ class UpdateStrategySelector {
 
   public ItemUpdater select(Item item) {
     ItemUpdater itemUpdater;
-    if (item.name == "Aged Brie") {
+    if ("Aged Brie".equals(item.name)) {
       itemUpdater = new AgedBrieUpdater(item);
     }
-    else if (item.name == "Backstage passes to a TAFKAL80ETC concert") {
+    else if ("Backstage passes to a TAFKAL80ETC concert".equals(item.name)) {
       itemUpdater = new BackstagePassUpdater(item);
     }
-    else if (item.name == "Sulfuras, Hand of Ragnaros") {
+    else if ("Sulfuras, Hand of Ragnaros".equals(item.name)) {
       itemUpdater = new SulfurasUpdater(item);
     }
-    else if (item.name == "Conjured Item") {
+    else if ("Conjured Item".equals(item.name)) {
       itemUpdater = new ConjuredItemUpdater(item);
     }
     else {
