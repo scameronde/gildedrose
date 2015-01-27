@@ -8,12 +8,9 @@ class GildedRose {
   }
 
   public void updateQuality() {
-    ItemUpdater itemUpdater;
-
     UpdateStrategySelector updateStrategySelector = new UpdateStrategySelector();
-    for (int i = 0; i < items.length; i++) {
-      itemUpdater = updateStrategySelector.invoke(items[i]);
-      itemUpdater.updateSellInAndQuality();
+    for (Item item : items) {
+      updateStrategySelector.select(item).updateSellInAndQuality();
     }
   }
 

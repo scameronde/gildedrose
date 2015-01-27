@@ -5,7 +5,7 @@ class UpdateStrategySelector {
   public UpdateStrategySelector() {
   }
 
-  public ItemUpdater invoke(Item item) {
+  public ItemUpdater select(Item item) {
     ItemUpdater itemUpdater;
     if (item.name == "Aged Brie") {
       itemUpdater = new AgedBrieUpdater(item);
