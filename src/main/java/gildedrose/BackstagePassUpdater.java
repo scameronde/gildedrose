@@ -6,6 +6,10 @@ class BackstagePassUpdater extends ItemUpdater {
     super(item);
   }
 
+  static boolean fitesBackstagePass(Item item) {
+    return "Backstage passes to a TAFKAL80ETC concert".equals(item.name);
+  }
+
   public void updateSellInAndQuality() {
     if (item.quality < 50) {
       item.quality = item.quality + 1;

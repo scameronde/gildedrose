@@ -6,6 +6,10 @@ class SulfurasUpdater extends ItemUpdater {
     super(item);
   }
 
+  static boolean fitsSulfuras(Item item) {
+    return "Sulfuras, Hand of Ragnaros".equals(item.name);
+  }
+
   public void updateSellInAndQuality() {
     if (item.quality > 0) {
     }

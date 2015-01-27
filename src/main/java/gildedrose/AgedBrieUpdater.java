@@ -6,6 +6,10 @@ class AgedBrieUpdater extends ItemUpdater {
     super(item);
   }
 
+  static boolean fitsAgedBrie(Item item) {
+    return "Aged Brie".equals(item.name);
+  }
+
   public void updateSellInAndQuality() {
     if (item.quality < 50) {
       item.quality = item.quality + 1;

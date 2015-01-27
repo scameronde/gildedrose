@@ -6,6 +6,10 @@ class ConjuredItemUpdater extends ItemUpdater {
     super(item);
   }
 
+  static boolean fitsConjuredItems(Item item) {
+    return "Conjured Item".equals(item.name);
+  }
+
   public void updateSellInAndQuality() {
     if (item.quality > 0) {
       item.quality = item.quality - 2;

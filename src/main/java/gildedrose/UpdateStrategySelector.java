@@ -7,16 +7,16 @@ class UpdateStrategySelector {
 
   public ItemUpdater select(Item item) {
     ItemUpdater itemUpdater;
-    if (fitsAgedBrie(item)) {
+    if (AgedBrieUpdater.fitsAgedBrie(item)) {
       itemUpdater = new AgedBrieUpdater(item);
     }
-    else if (fitesBackstagePass(item)) {
+    else if (BackstagePassUpdater.fitesBackstagePass(item)) {
       itemUpdater = new BackstagePassUpdater(item);
     }
-    else if (fitsSulfuras(item)) {
+    else if (SulfurasUpdater.fitsSulfuras(item)) {
       itemUpdater = new SulfurasUpdater(item);
     }
-    else if (fitsConjuredItems(item)) {
+    else if (ConjuredItemUpdater.fitsConjuredItems(item)) {
       itemUpdater = new ConjuredItemUpdater(item);
     }
     else {
@@ -25,19 +25,4 @@ class UpdateStrategySelector {
     return itemUpdater;
   }
 
-  private boolean fitsConjuredItems(Item item) {
-    return "Conjured Item".equals(item.name);
-  }
-
-  private boolean fitsSulfuras(Item item) {
-    return "Sulfuras, Hand of Ragnaros".equals(item.name);
-  }
-
-  private boolean fitesBackstagePass(Item item) {
-    return "Backstage passes to a TAFKAL80ETC concert".equals(item.name);
-  }
-
-  private boolean fitsAgedBrie(Item item) {
-    return "Aged Brie".equals(item.name);
-  }
 }
